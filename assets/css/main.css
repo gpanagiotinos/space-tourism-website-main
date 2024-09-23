@@ -1,7 +1,7 @@
-@import url("../css/_spacing.css");
-@import url("../css/_text.css");
-@import url("../css/_utilities.css");
-@import url("../css/_animation.css");
+@import url("./spacing.css");
+@import url("./text.css");
+@import url("./utilities.css");
+@import url("./animation.css");
 
 :root {
   --blue-900: #0b0d17;
