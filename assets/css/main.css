@@ -27,6 +27,7 @@ html {
   font-family: "Bellefair";
   /* height: calc(100dvh - 20px); */
   height: 100dvh;
+  min-height: 880px;
   color: var(--white);
   overflow-x: hidden;
 }
@@ -413,6 +414,9 @@ p {
   }
 }
 @media (width > 767px) {
+  html {
+    min-height: 1024px;
+  }
   body.home {
     background-image: url("../home/background-home-tablet.jpg");
   }
@@ -536,7 +540,7 @@ p {
     -moz-background-size: cover;
     -o-background-size: cover;
     width: 100dvw;
-	height: 100%;
+    height: 100%;
   }
   .technology-image.vehicle::before {
     background-image: url("../technology/image-launch-vehicle-tablet.png");
