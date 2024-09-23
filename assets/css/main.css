@@ -40,6 +40,9 @@ body {
   margin: 0;
   background-image: url("../home/background-home-mobile.jpg");
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -301,6 +304,9 @@ p {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
 }
 .img-crew {
   width: 100%;
@@ -355,6 +361,9 @@ p {
   background-position-y: top;
   background-repeat: no-repeat;
   background-size: contain;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
   left: 50%;
   top: 50%;
   -webkit-transform: translateY(-50%) translateX(-50%);
@@ -397,6 +406,9 @@ p {
   /* technology */
   .technology-image::before {
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
   }
 }
 @media (width > 767px) {
@@ -515,10 +527,13 @@ p {
     padding-bottom: 0;
   }
   .technology-text div {
-	height: auto;
+    height: auto;
   }
   .technology-image::before {
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     width: 100dvw;
   }
   .technology-image.vehicle::before {
@@ -708,6 +723,9 @@ p {
     background-position-y: center;
     background-repeat: no-repeat;
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
   }
   .technology-image.vehicle::before {
     background-image: url("../technology/image-launch-vehicle-portrait.jpg");
