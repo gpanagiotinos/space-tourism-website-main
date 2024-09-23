@@ -1,0 +1,87 @@
+@keyframes fadeInBorderRight {
+  from {
+    border-right-color: rgba(var(--white-rgb), 0.5);
+  }
+  to {
+    border-right-color: rgba(var(--white-rgb), 1);
+  }
+}
+@keyframes fadeOutBorderRight {
+    from {
+      border-right-color: rgba(var(--white-rgb), 1);
+    }
+    to {
+      border-right-color: rgba(var(--white-rgb), 0);
+    }
+}
+
+@keyframes fadeInBorderBottom {
+  from {
+    border-bottom-color: rgba(var(--white-rgb), 0.5);
+  }
+  to {
+    border-bottom-color: rgba(var(--white-rgb), 1);
+  }
+}
+@keyframes fadeOutBorderBottom {
+    from {
+      border-bottom-color: rgba(var(--white-rgb), 1);
+    }
+    to {
+      border-bottom-color: rgba(var(--white-rgb), 0);
+    }
+}
+@keyframes fadeInExploreBtn {
+  from {
+    box-shadow: none;
+    color: rgba(var(--blue-900-rgb), 1);
+  }
+  to {
+    box-shadow: 0 0 0 72px rgba(var(--white-rgb), 0.2);
+    color: rgba(var(--blue-900-rgb), 0.2);
+  }
+}
+@keyframes fadeOutExploreBtn {
+  from {
+    box-shadow: 0 0 0 72px rgba(var(--white-rgb), 0.2);
+    color: rgba(var(--blue-900-rgb), 0.2);
+  }
+  to {
+    box-shadow: none;
+    color: rgba(var(--blue-900-rgb), 1);
+  }
+}
+
+@keyframes fadeInBackground {
+  from {
+    background-color: rgba(var(--white-rgb), 0.2);
+  }
+  to {
+    background-color: rgba(var(--white-rgb), 0.5);
+  }
+}
+@keyframes fadeOutBackground {
+    from {
+      background-color: rgba(var(--white-rgb), 0.5);
+    }
+    to {
+      background-color: rgba(var(--white-rgb), 0.2);
+    }
+}
+
+@keyframes fadeInBorder {
+  from {
+    border-color: rgba(var(--white-rgb), 0.2);
+  }
+  to {
+    border-color: rgba(var(--white-rgb), 1);
+  }
+}
+@keyframes fadeOutBorder {
+    from {
+      border-color: rgba(var(--white-rgb), 1);
+    }
+    to {
+      border-color: rgba(var(--white-rgb), 0.2);
+    }
+}

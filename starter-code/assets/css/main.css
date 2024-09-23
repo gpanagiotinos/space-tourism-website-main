@@ -1,0 +1,721 @@
+@import url("./_spacing.css");
+@import url("./_text.css");
+@import url("./_utilities.css");
+@import url("./_animation.css");
+
+:root {
+  --blue-900: #0b0d17;
+  --blue-300: #d0d6f9;
+  --white: #ffffff;
+  --gray: rgba(var(--white-rgb), 0.4);
+  --white-rgb: 255, 255, 255;
+  --blue-900-rgb: 11, 13, 23;
+}
+@font-face {
+  font-family: "Bellefair";
+  src: url("../fonts/Bellefair-Regular.ttf");
+}
+@font-face {
+  font-family: "BarlowCondensed";
+  src: url("../fonts/BarlowCondensed-Regular.ttf");
+}
+@font-face {
+  font-family: "Barlow";
+  src: url("../fonts/Barlow-Regular.ttf");
+}
+html {
+  font-family: "Bellefair";
+  /* height: calc(100dvh - 20px); */
+  height: 100dvh;
+  color: var(--white);
+  overflow: hidden;
+}
+body {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--blue-900);
+  margin: 0;
+  background-image: url("../home/background-home-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body.destination {
+  background-image: url("../destination/background-destination-mobile.jpg");
+  background-position: center;
+}
+body.crew {
+  background-image: url("../crew/background-crew-mobile.jpg");
+  background-position: center;
+}
+body.technology {
+  background-image: url("../technology/background-technology-mobile.jpg");
+  background-position: center;
+  overflow: hidden;
+}
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-300);
+  max-height: 360px;
+}
+a {
+  color: var(--white);
+  text-decoration: none;
+}
+p {
+  text-align: center;
+}
+/* menu */
+.logo .divider {
+  display: none;
+}
+.menu {
+  top: 0;
+  right: 0;
+  position: absolute;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 60%;
+  padding-left: var(--space-400);
+  gap: var(--space-500);
+  background-color: rgba(var(--white-rgb), 0.2);
+  backdrop-filter: blur(20px);
+  z-index: 100;
+}
+.menu .menu-items {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--space-400);
+}
+
+.menu .menu-close {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: var(--space-400);
+  padding-bottom: var(--space-400);
+}
+.menu-close img {
+  padding-right: var(--space-300);
+}
+.menu-item {
+  z-index: 100;
+  width: calc(100% - 3px);
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-150);
+  justify-content: flex-start;
+  align-items: center;
+  animation: fadeOutBorderRight 0.5s ease-in-out 0s;
+  border-right: 3px solid transparent;
+}
+.menu-item:hover {
+  border-right: 3px solid;
+  animation: fadeInBorderRight 1s forwards;
+}
+.menu-item.active {
+  border-right: 3px solid var(--white);
+  animation: none;
+}
+.menu-item span {
+  line-height: 100%;
+}
+/* content */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding-top: var(--space-300);
+  padding-left: var(--space-300);
+  padding-right: var(--space-300);
+  padding-bottom: var(--space-300);
+  position: relative;
+}
+.destination .main-content {
+  gap: var(--space-400);
+}
+.crew .main-content {
+  gap: var(--space-400);
+}
+.main-content .main-content-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-300);
+  width: 100%;
+  height: 100%;
+}
+.home .main-content .main-content-top span {
+  text-align: center;
+}
+.crew .main-content .main-content-top {
+  justify-content: flex-start;
+  text-align: center;
+}
+.crew .main-content .main-content-crew-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: var(--space-500);
+  gap: var(--space-300);
+  height: 100%;
+}
+.crew .main-content .main-content-crew-text div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-100);
+}
+
+.main-content .main-content-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.main-content-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-300);
+  width: 100%;
+}
+.home .button {
+  background-color: var(--white);
+  width: 144px;
+  height: 144px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  animation: fadeOutExploreBtn 1s ease-in-out 0s;
+}
+.home .button:hover {
+  animation: fadeInExploreBtn 1s forwards;
+}
+
+/* choises */
+.select {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  gap: var(--space-400);
+}
+.select-item {
+  animation: fadeOutBorderBottom 0.5s ease-in-out 0s;
+  border-bottom: 3px solid transparent;
+  height: 100%;
+  color: var(--blue-300);
+}
+.select-item.active {
+  border-bottom: 3px solid var(--white);
+  animation: none;
+  color: var(--white);
+}
+.select-item:hover {
+  border-bottom: 3px solid;
+  animation: fadeInBorderBottom 1s forwards;
+  color: var(--white);
+}
+/* carousel */
+.carousel {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-300);
+}
+/* destination */
+.destination .destination-pick {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-300);
+  width: 100%;
+  height: 100%;
+}
+.destination-icon {
+  width: 150px;
+  height: 150px;
+}
+.destination-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--space-300);
+  margin-bottom: var(--space-300);
+  text-align: center;
+  gap: var(--space-200);
+}
+.destination-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-300);
+  width: 100%;
+  padding-top: var(--space-300);
+}
+.destination-info-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-150);
+}
+.destination-info-item span {
+  line-height: 100%;
+}
+/* crew img */
+.img-mask {
+  -webkit-mask-image: linear-gradient(black 80%, transparent 100%);
+  mask-image: linear-gradient(black 80%, transparent 100%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.img-crew {
+  width: 100%;
+  height: 340px;
+}
+.img-crew-commander {
+  background-image: url("../crew/image-douglas-hurley.webp");
+}
+.img-crew-engineer {
+  background-image: url("../crew/image-anousheh-ansari.webp");
+}
+.img-crew-specialist {
+  background-image: url("../crew/image-mark-shuttleworth.webp");
+}
+.img-crew-pilot {
+  background-image: url("../crew/image-victor-glover.webp");
+}
+/* technology */
+.technology .main-content {
+  padding-bottom: var(--space-600);
+}
+.technology-container {
+  width: 100%;
+  height: 100%;
+  gap: var(--space-300);
+  display: flex;
+  flex-direction: column;
+}
+.technology-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-400);
+}
+.technology-image-container {
+  height: 100%;
+  padding-top: var(--space-800);
+}
+.technology-image {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.technology-image::before {
+  content: "";
+  z-index: -1;
+  height: 100%;
+  width: 768px;
+  position: absolute;
+  background-position-x: center;
+  background-position-y: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  -moz-transform: translateY(-50%) translateX(-50%);
+}
+.technology-image.vehicle::before {
+  background-image: url("../technology/image-launch-vehicle-landscape.jpg");
+}
+.technology-image.spaceport::before {
+  background-image: url("../technology/image-spaceport-landscape.jpg");
+}
+.technology-image.capsule::before {
+  background-image: url("../technology/image-space-capsule-landscape.jpg");
+}
+.technology-bottom {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 512px;
+  gap: var(--space-500);
+}
+.technology-text {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: var(--space-200);
+}
+.technology-text div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-200);
+}
+
+/* media queries */
+@media (width > 700px) {
+  /* technology */
+  .technology-image::before {
+    background-size: cover;
+  }
+}
+@media (width > 767px) {
+  body.home {
+    background-image: url("../home/background-home-tablet.jpg");
+  }
+  body.destination {
+    background-image: url("../destination/background-destination-tablet.jpg");
+  }
+  body.crew {
+    background-image: url("../crew/background-crew-tablet.jpg");
+  }
+  nav {
+    padding: 0;
+    height: 96px;
+  }
+  .logo {
+    width: 160px;
+    text-align: center;
+  }
+  .menu {
+    flex-direction: row;
+    position: relative;
+    height: 96px;
+    width: 640px;
+    background-color: transparent;
+    backdrop-filter: none;
+    visibility: visible !important;
+  }
+  .menu::before {
+    content: "";
+    background-color: rgba(var(--white-rgb), 0.1);
+    backdrop-filter: blur(20px);
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .menu .menu-items {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .menu .menu-item {
+    height: calc(100% - 3px);
+    width: initial;
+    animation: fadeOutBorderBottom 0.5s ease-in-out 0s;
+    border-bottom: 3px solid transparent;
+    border-right: 0;
+  }
+  .menu-item:hover {
+    border-bottom: 3px solid;
+    animation: fadeInBorderBottom 1s forwards;
+  }
+  .menu-item.active {
+    border-bottom: 3px solid var(--white);
+    animation: none;
+  }
+  .menu .menu-close {
+    display: none;
+  }
+  .menu-button {
+    display: none;
+  }
+  .main-content {
+    margin-left: var(--space-500);
+    margin-right: var(--space-500);
+    margin-top: var(--space-500);
+    margin-bottom: var(--space-500);
+    padding: 0;
+    gap: var(--space-300);
+  }
+  .home .main-content {
+    margin-left: var(--space-500);
+    margin-right: var(--space-500);
+    margin-top: var(--space-1600);
+    margin-bottom: var(--space-1600);
+    padding: 0;
+    gap: var(--space-600);
+  }
+  .home .button {
+    width: 272px;
+    height: 272px;
+  }
+  .home .main-content .main-content-top {
+    width: 65dvw;
+  }
+  .main-content .main-content-bottom {
+    width: 65dvw;
+  }
+  .main-content-title {
+    justify-content: flex-start;
+  }
+  .destination-icon {
+    width: 300px;
+    height: 300px;
+  }
+  .destination-info {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  /* crew */
+  .crew .main-content .main-content-crew-text {
+    width: 512px;
+  }
+  .crew .main-content .main-content-crew-text div {
+    gap: var(--space-200);
+  }
+  .img-crew {
+    width: 100%;
+    height: 560px;
+  }
+  /* technology */
+  .technology .main-content {
+    padding-bottom: 0;
+  }
+  .technology-text div {
+	height: auto;
+  }
+  .technology-image::before {
+    background-size: cover;
+    width: 100dvw;
+  }
+  .technology-image.vehicle::before {
+    background-image: url("../technology/image-launch-vehicle-tablet.png");
+  }
+  .technology-image.spaceport::before {
+    background-image: url("../technology/image-spaceport-landscape.jpg");
+  }
+  .technology-image.capsule::before {
+    background-image: url("../technology/image-space-capsule-landscape.jpg");
+  }
+}
+@media (width > 1439px) {
+  body.home {
+    background-image: url("../home/background-home-desktop.jpg");
+  }
+  body.destination {
+    background-image: url("../destination/background-destination-desktop.jpg");
+  }
+  body.crew {
+    background-image: url("../crew/background-crew-desktop.jpg");
+  }
+  nav {
+    height: 136px;
+    margin-top: var(--space-500);
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .logo .divider {
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    right: calc(50% - var(--space-400));
+    z-index: 500;
+    display: block;
+  }
+  .menu {
+    width: 100%;
+    visibility: visible !important;
+  }
+  .main-content {
+    max-width: 1110px;
+    width: 1110px;
+  }
+  .home .main-content {
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, auto));
+  }
+  .home .main-content .main-content-top {
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .home .main-content .main-content-top span {
+    text-align: left;
+  }
+  .home .main-content .main-content-bottom {
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+  }
+  .destination .main-content {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: var(--space-600);
+    margin-bottom: var(--space-600);
+    flex-direction: row;
+  }
+  .destination .main-content .main-content-bottom {
+    max-width: 445px;
+  }
+  .select {
+    justify-content: flex-start;
+  }
+  .destination-text {
+    align-items: flex-start;
+    margin-top: var(--space-500);
+    margin-bottom: var(--space-500);
+  }
+  .destination-text span {
+    text-align: left;
+  }
+  .destination-icon {
+    width: 480px;
+    height: 480px;
+  }
+  .destination-info {
+    justify-content: flex-start;
+    padding-top: var(--space-500);
+  }
+  .destination-info-item {
+    flex: 1;
+    align-items: flex-start;
+  }
+  /* crew */
+  .crew .main-content {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: var(--space-600);
+    margin-bottom: var(--space-600);
+    flex-direction: row;
+  }
+  .img-crew {
+    width: 100%;
+    height: 734px;
+  }
+  .crew .main-content .main-content-top {
+    width: 100%;
+    align-items: flex-start;
+  }
+  .crew .main-content .main-content-crew-text {
+    justify-content: center;
+    margin-top: 0;
+    width: 540px;
+    align-items: flex-start;
+  }
+  .crew .main-content .main-content-crew-text span {
+    text-align: left;
+  }
+  .carousel {
+    justify-content: flex-start;
+  }
+  .img-mask {
+    mask-image: linear-gradient(black 70%, transparent 91%);
+  }
+
+  /* technology */
+  .technology .main-content {
+    width: 100dvw;
+    max-width: 100dvw;
+    margin: 0;
+    align-items: flex-end;
+  }
+  .technology-container {
+    max-width: 1275px;
+    width: 1275px;
+    margin-top: var(--space-600);
+    margin-bottom: var(--space-600);
+  }
+  .technology-content {
+    flex-direction: row-reverse;
+  }
+  .technology-image-container {
+    width: 100%;
+  }
+  .technology-bottom {
+    flex-direction: row;
+    gap: var(--space-800);
+    max-width: 635px;
+  }
+  .technology .carousel {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .technology-text {
+    text-align: left;
+    justify-content: center;
+    gap: var(--space-300);
+  }
+  .technology-text div {
+    height: auto;
+    align-items: flex-start;
+  }
+  .technology .carousel {
+    width: fit-content;
+  }
+  .technology-image {
+    height: 600px;
+  }
+  .technology-image::before {
+    content: "";
+    height: 600px;
+    width: 100%;
+    position: absolute;
+    background-position-x: right;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .technology-image.vehicle::before {
+    background-image: url("../technology/image-launch-vehicle-portrait.jpg");
+  }
+  .technology-image.spaceport::before {
+    background-image: url("../technology/image-spaceport-portrait.jpg");
+  }
+  .technology-image.capsule::before {
+    background-image: url("../technology/image-space-capsule-portrait.jpg");
+  }
+}

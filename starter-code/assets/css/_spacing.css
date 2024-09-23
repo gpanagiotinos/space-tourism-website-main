@@ -1,0 +1,16 @@
+:root {
+  --space-unit: 0.08px;
+  --space-25: calc(25 * var(--space-unit));
+  --space-50: calc(50 * var(--space-unit));
+  --space-100: calc(100 * var(--space-unit));
+  --space-150: calc(150 * var(--space-unit));
+  --space-200: calc(200 * var(--space-unit));
+  --space-300: calc(300 * var(--space-unit));
+  --space-400: calc(400 * var(--space-unit));
+  --space-500: calc(500 * var(--space-unit));
+  --space-600: calc(600 * var(--space-unit));
+  --space-800: calc(800 * var(--space-unit));
+  --space-1000: calc(1000 * var(--space-unit));
+  --space-1200: calc(1200 * var(--space-unit));
+  --space-1600: calc(1600 * var(--space-unit));
+}

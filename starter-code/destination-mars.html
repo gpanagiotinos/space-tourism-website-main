@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+	<link rel="stylesheet" type="text/css" href="./assets/css/main.css" />
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body class="destination">
+    <main>
+      <nav>
+        <a href="/" class="logo">
+          <img
+            width="40"
+            height="40"
+            src="./assets/shared/logo.svg"
+            alt="logo"
+          />
+          <div class="divider"></div>
+        </a>
+        <div id="menu" class="menu hidden">
+          <div id="menu-close" class="menu-close">
+            <a href="">
+              <img
+                width="24"
+                height="24"
+                src="./assets/shared/icon-close.svg"
+                alt="menu-close"
+              />
+            </a>
+          </div>
+          <div class="menu-items">
+            <a id="00" class="menu-item uppercase text-none" href="/">
+              <span class="bold">00</span><span class="">Home</span>
+            </a>
+            <a
+              id="01"
+              class="menu-item uppercase text-none active"
+              href="/destination-moon.html"
+            >
+              <span class="bold">01</span><span class="">Destination</span>
+            </a>
+            <a
+              id="02"
+              class="menu-item uppercase text-none"
+              href="/crew-commander.html"
+            >
+              <span class="bold">02</span><span class="">Crew</span>
+            </a>
+            <a
+              id="03"
+              class="menu-item uppercase text-none"
+              href="/technology-vehicle.html"
+            >
+              <span class="bold">03</span><span class="">Technology</span>
+            </a>
+          </div>
+        </div>
+        <a id="menu-button" href="">
+          <img
+            class="menu-button"
+            width="24"
+            height="24"
+            src="./assets/shared/icon-hamburger.svg"
+            alt="menu-button"
+          />
+        </a>
+      </nav>
+      <div class="main-content">
+        <div class="main-content-top">
+          <div class="destination-pick">
+            <div class="main-content-title uppercase">
+              <span class="gray bold">01</span>
+              <span> Pick your destination </span>
+            </div>
+            <div class="full-height full-width flex col center">
+              <img
+                class="destination-icon"
+                width="445"
+                height="445"
+                src="./assets/destination/image-mars.png"
+                alt="Mars"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="main-content-bottom">
+          <div class="select">
+            <a
+              id="moon"
+              class="select-item uppercase text-none"
+              href="/destination-moon.html"
+            >
+              <span class="text-8">Moon</span>
+            </a>
+            <a
+              id="mars"
+              class="select-item uppercase active text-none"
+              href="/destination-mars.html"
+            >
+              <span class="text-8">Mars</span>
+            </a>
+            <a
+              id="europa"
+              class="select-item uppercase text-none"
+              href="/destination-europa.html"
+            >
+              <span class="text-8">Europa</span>
+            </a>
+            <a
+              id="titan"
+              class="select-item uppercase text-none"
+              href="/destination-titan.html"
+            >
+              <span class="text-8">Titan</span>
+            </a>
+          </div>
+          <div class="destination-text">
+            <span class="text-2 uppercase">Mars</span>
+            <span class="text-9 light-blue">
+				Don’t forget to pack your hiking boots. You’ll need
+				them to tackle Olympus Mons, the tallest planetary mountain in our solar
+				system. It’s two and a half times the size of Everest!
+            </span>
+          </div>
+          <div class="divider"></div>
+          <div class="destination-info">
+            <div class="destination-info-item">
+              <span class="text-7 uppercase light-blue">Avg. distance</span
+              ><span class="desktop-text-6 uppercase white">225 mil.</span>
+            </div>
+            <div class="destination-info-item">
+              <span class="text-7 uppercase light-blue">Est. travel time</span
+              ><span class="desktop-text-6 uppercase white">9 months</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script type="text/javascript" src="./assets/js/main.js"></script>
+</html>

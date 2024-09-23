@@ -1,0 +1,166 @@
+.text-1 {
+  font-size: 80px;
+  line-height: 171.9%;
+  letter-spacing: 0px;
+}
+.text-2 {
+  font-size: 56px;
+  line-height: 100%;
+  letter-spacing: 0px;
+}
+.text-3 {
+  font-size: 24px;
+  line-height: normal;
+  letter-spacing: 0px;
+  margin: 0;
+}
+.text-4 {
+  font-size: 18px;
+  line-height: normal;
+  letter-spacing: 0px;
+  margin: 0;
+}
+.text-5 {
+  font-size: 28px;
+  line-height: 33.6%;
+  letter-spacing: 4px;
+  font-family: "BarlowCondensed";
+}
+.text-6 {
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0.15em;
+  font-family: "BarlowCondensed";
+}
+.text-7 {
+  font-size: 14px;
+  line-height: 16.8%;
+  letter-spacing: 2px;
+  font-family: "BarlowCondensed";
+}
+.text-8 {
+  font-size: 14px;
+  line-height: 19.2%;
+  letter-spacing: 2px;
+  font-family: "BarlowCondensed";
+}
+.text-9 {
+  font-size: 15px;
+  line-height: 180%;
+  letter-spacing: 0px;
+  font-family: "Barlow";
+}
+
+/* desktop */
+.desktop-text-6 {
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 0px;
+}
+.desktop-text-5 {
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 0px;
+}
+.home .title {
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0.15em;
+  font-family: "BarlowCondensed";
+}
+.menu-item {
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 2px;
+  font-family: "BarlowCondensed";
+}
+.main-content-title {
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0.15em;
+  font-family: "BarlowCondensed";
+}
+/* media queries */
+@media (width > 767px) {
+  .text-1 {
+    font-size: 144px;
+    line-height: 100%;
+    letter-spacing: 0px;
+  }
+  .text-2 {
+    font-size: 80px;
+    line-height: 100%;
+    letter-spacing: 0;
+  }
+  .text-3 {
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0;
+  }
+  .text-4 {
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0;
+  }
+  .text-5 {
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.15em;
+
+    font-family: "Barlow";
+  }
+  .text-9 {
+    font-size: 16px;
+    line-height: 180%;
+    letter-spacing: 0;
+
+    font-family: "Barlow";
+  }
+  .home .button.text-4 {
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0;
+  }
+  .home .title {
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 4px;
+
+    font-family: "BarlowCondensed";
+  }
+  .main-content-title {
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.15em;
+    font-family: "BarlowCondensed";
+  }
+}
+@media (width > 1439px) {
+  .text-9 {
+    font-size: 18px;
+    line-height: 180%;
+    letter-spacing: 0px;
+    font-family: "Barlow";
+  }
+  .text-2 {
+    font-size: 96px;
+    line-height: 100%;
+    letter-spacing: 0;
+  }
+  .text-3 {
+	font-size: 56px;
+    line-height: 100%;
+    letter-spacing: 0;
+  }
+  .text-4 {
+	font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0;
+  }
+  .main-content-title {
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 0.15em;
+    font-family: "BarlowCondensed";
+  }
+}
