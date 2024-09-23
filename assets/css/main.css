@@ -28,7 +28,7 @@ html {
   /* height: calc(100dvh - 20px); */
   height: 100dvh;
   color: var(--white);
-  overflow: hidden;
+  overflow-x: hidden;
 }
 body {
   display: flex;
@@ -45,6 +45,7 @@ body {
   -o-background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  overflow-x: hidden;
 }
 body.destination {
   background-image: url("../destination/background-destination-mobile.jpg");
@@ -57,7 +58,7 @@ body.crew {
 body.technology {
   background-image: url("../technology/background-technology-mobile.jpg");
   background-position: center;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 main {
   height: 100%;
@@ -354,7 +355,7 @@ p {
 .technology-image::before {
   content: "";
   z-index: -1;
-  height: 100%;
+  height: calc(310px - var(--space-800));
   width: 768px;
   position: absolute;
   background-position-x: center;
@@ -535,6 +536,7 @@ p {
     -moz-background-size: cover;
     -o-background-size: cover;
     width: 100dvw;
+	height: 100%;
   }
   .technology-image.vehicle::before {
     background-image: url("../technology/image-launch-vehicle-tablet.png");
